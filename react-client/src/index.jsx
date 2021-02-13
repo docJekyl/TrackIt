@@ -1,35 +1,56 @@
 import React from 'react';
+import axios from 'axios';
 import ReactDOM from 'react-dom';
-import $ from 'jquery';
-import List from './components/List.jsx';
+import VehicleList from './components/VehicleList.jsx';
+import ServiceList from './components/ServiceList.jsx';
+
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      items: []
+    this.state = {
+      vehicles: [],
+      selected: null,
     }
+    this.getVehicles = this.getVehicles.bind(this);
+    this.setSelectedVehicle = this.setSelectedVehicle.bind(this);
+    this.getService = this.getService.bind(this);
   }
 
   componentDidMount() {
-    $.ajax({
-      url: '/items', 
-      success: (data) => {
-        this.setState({
-          items: data
-        })
-      },
-      error: (err) => {
-        console.log('err', err);
-      }
-    });
+    this.getVehicles();
   }
 
+  getVehicles() {
+    axios.get('http://localhost:3000/vehicle')
+      .then((result) =>{ this.setState({ vehicles: result.data }) })
+      .catch((err) => console.log(err, 'error'));
+  }
+
+  getService(id) {
+    axios.get('http://localhost:3000/vehicle', { id })
+      .then((result) =>{ this.setState({ vehicles: result.data }) })
+      .catch((err) => console.log(err, 'error'));
+  }
+
+  setSelectedVehicle(selection) {
+    this.setState({selected: selection})
+  }
+
+
+
   render () {
-    return (<div>
-      <h1>Item List</h1>
-      <List items={this.state.items}/>
-    </div>)
+    var { vehicles } = this.state;
+    var { selected } = this.state;
+
+    return (
+      <div>
+        {selected
+        ? <ServiceList vehicle={selected} />
+        : <VehicleList vehicles={vehicles} fn={this.setSelectedVehicle} />
+
+        }
+      </div>)
   }
 }
 

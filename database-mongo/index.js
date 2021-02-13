@@ -1,34 +1,12 @@
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
+const mongoose = require('mongoose');
 
-var db = mongoose.connection;
-
-db.on('error', function() {
-  console.log('mongoose connection error');
+mongoose.connect('mongodb://localhost:27017/TrackIt', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
 
-db.once('open', function() {
-  console.log('mongoose connected successfully');
-});
+const db = mongoose.connection;
 
-var itemSchema = mongoose.Schema({
-  make: String,
-  model: String,
-  year: Number,
-  nick_name: String,
-  records: [],
-});
+module.exports = db;
 
-var Item = mongoose.model('Item', itemSchema);
-
-var selectAll = function(callback) {
-  Item.find({}, function(err, items) {
-    if(err) {
-      callback(err, null);
-    } else {
-      callback(null, items);
-    }
-  });
-};
-
-module.exports.selectAll = selectAll;
+// :279017

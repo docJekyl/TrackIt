@@ -1,24 +1,37 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var items = require('../database-mongo');
+const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const Vehicle = require('../database-mongo/vehicle');
+const Service = require('../database-mongo/service')
 
-var app = express();
+const app = express();
 
 app.use(express.static(__dirname + '/../react-client/dist'));
 
-// UNCOMMENT FOR ANGULAR
-// app.use(express.static(__dirname + '/../angular-client'));
-// app.use(express.static(__dirname + '/../node_modules'));
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
 
-app.get('/items', function (req, res) {
-  items.selectAll(function(err, data) {
-    if(err) {
-      res.sendStatus(500);
-    } else {
-      res.json(data);
-    }
-  });
+
+// Returns all vehicles
+app.get('/vehicle', async (req, res) => {
+  try {
+    var results = await Vehicle.find();
+    // console.log(results)
+    res.status(200).send(results);
+  } catch (err) {
+    res.status(500).send(err);
+  }
 });
+
+// Adds a vehicle to the db
+app.post('/vehicle', async (req, res) => {
+  try {
+    var result = await Vehicle.create(req.body);
+    res.status(200).send(result);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+})
 
 app.listen(3000, function() {
   console.log('listening on port 3000!');
