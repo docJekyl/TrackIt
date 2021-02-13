@@ -12,8 +12,11 @@ db.once('open', function() {
 });
 
 var itemSchema = mongoose.Schema({
-  quantity: Number,
-  description: String
+  make: String,
+  model: String,
+  year: Number,
+  nick_name: String,
+  records: [],
 });
 
 var Item = mongoose.model('Item', itemSchema);
