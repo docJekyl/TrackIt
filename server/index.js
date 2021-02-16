@@ -16,7 +16,6 @@ app.use(bodyParser.json());
 app.get('/vehicle', async (req, res) => {
   try {
     var results = await Vehicle.find();
-    // console.log(results)
     res.status(200).send(results);
   } catch (err) {
     res.status(500).send(err);
@@ -26,12 +25,33 @@ app.get('/vehicle', async (req, res) => {
 // Adds a vehicle to the db
 app.post('/vehicle', async (req, res) => {
   try {
-    var result = await Vehicle.create(req.body);
+    var result = await Vehicle.create(req.body.vehicle);
     res.status(200).send(result);
   } catch (err) {
     res.status(500).send(err);
   }
 })
+
+// Get list of services for a specific vehicle
+app.get('/service', async (req, res) => {
+  try {
+    var results = await Service.find({vehicleId: req.query.ID});
+    res.status(200).send(results);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+});
+
+// Add a service to a vehicle's record
+app.post('/service', async (req, res) => {
+  try {
+    var result = await Service.create(req.body.service);
+    res.status(200).send(result);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+})
+
 
 app.listen(3000, function() {
   console.log('listening on port 3000!');

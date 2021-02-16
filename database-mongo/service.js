@@ -12,8 +12,10 @@ db.once('open', function() {
 });
 
 var serviceSchema = mongoose.Schema({
+  vehicleId: String,
   milage: Number,
   service: String,
+  note: String,
   cost: Number,
 });
 
