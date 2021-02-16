@@ -1,0 +1,108 @@
+.body {
+  background-color: black;
+  background-image: url("/assets/moto1.jpg");
+  background-repeat: no-repeat;
+  background-size: 1500px;
+  background-position: center top;
+}
+
+
+.fade-in {
+  animation: fadeIn ease 23s;
+-webkit-animation: fadeIn ease 20s;
+-moz-animation: fadeIn ease 20s;
+-o-animation: fadeIn ease 20s;
+-ms-animation: fadeIn ease 20s;
+}
+
+
+.appDiv {
+  margin: 12% auto;
+  background-color:rgba(255, 255, 255, 0.144);
+  /* border: 3px solid #f1f1f1; */
+  width: 950px;
+  color: lightgrey; */
+  animation: fadeIn ease 3s;
+}
+
+.dark-text {
+  color: rgb(255, 255, 255);
+  background-color:rgba(255, 255, 255, 0.144);
+}
+
+.card-header {
+  background-color:rgba(255, 255, 255, 0.144);
+}
+
+
+
+.mainFooter {
+  /* background-color: rgba(0, 0, 0, 0.411); */
+  /* height: 250px; */
+}
+
+
+div.card {
+  background-color: rgba(5, 5, 5, 0.322);
+}
+
+button.btn.btn-outline-dark {
+  color: #d5d5d5;
+  border-color: #ffffff;
+}
+
+#returnBtn {
+    margin: 20px;
+}
+
+/*=================== fade in ==================*/
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+/*=================== fade out ==================*/
+@-ms-keyframes fadeOut {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@keyframes fadeOut {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeOut {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeOut {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeOut {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeOut {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}

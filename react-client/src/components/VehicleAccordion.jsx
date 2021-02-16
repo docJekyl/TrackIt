@@ -7,8 +7,8 @@ import NewVehicleForm from './NewVehicleForm.jsx';
 const VehicleAccordion = (props) => {
 
   return(
-    <Accordion defaultActiveKey="0">
-    <Card>
+    <Accordion defaultActiveKey="0" className="accordion">
+    <Card >
       <Card.Header>
         <Accordion.Toggle as={Button} variant="outline-dark" eventKey="1">
           Add a vehicle to your garage

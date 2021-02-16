@@ -4,7 +4,7 @@ import {Container, Card, Row, Col } from 'react-bootstrap'
 const ServiceItems =  (props) => (
   <div>
     <Card>
-      <Container>
+      <Container className="dark-text service">
         <Row> Milage: {props.item.milage} </Row>
         <Row> Service Done: {props.item.service}</Row>
         <Row> Comments: {props.item.note}</Row>

@@ -35,7 +35,7 @@ class NewVehicleForm extends React.Component {
   render() {
 
     return (
-      <Form>
+      <Form className="form dark-text" >
         <Form.Group controlId="formBasicMake">
           <Form.Label>Vehicle Make</Form.Label>
           <Form.Control

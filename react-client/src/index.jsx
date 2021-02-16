@@ -76,22 +76,26 @@ class App extends React.Component {
     var { serviceList } = this.state
 
     return (
-      <div>
-        {selected
-        ? <div>
-            <ServiceList vehicle={selected} serviceList={serviceList} />
-            <ServiceAccordion fn={this.addService}/>
-            <Button onClick={() => this.returnToVehicles()} variant="outline-dark">
-                Return to Vehicle Selection
-            </Button>
-          </div>
+      <div mainDiv="mainDiv">
+        <div className="appDiv" >
+          {selected
+          ? <div >
+              <ServiceList vehicle={selected} serviceList={serviceList} />
+              <ServiceAccordion fn={this.addService}/>
+              <Button onClick={() => this.returnToVehicles()} variant="outline-dark" id="returnBtn">
+                  Return to Vehicle Selection
+              </Button>
+            </div>
 
-        : <div>
-          <VehicleList vehicles={vehicles} fn={this.setSelectedVehicle} />
-          <VehicleAccordion fn={this.addVehicle}/>
+          : <div>
+            <VehicleList vehicles={vehicles} fn={this.setSelectedVehicle} />
+            <VehicleAccordion fn={this.addVehicle}/>
+          </div>
+          }
+
         </div>
-        }
-      </div>)
+      </div>
+    )
   }
 }
 
