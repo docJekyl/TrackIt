@@ -3,7 +3,16 @@
   background-image: url("/assets/moto1.jpg");
   background-repeat: no-repeat;
   background-size: 1500px;
-  background-position: center top;
+  background-position: center top ;
+  background-attachment: fixed;
+}
+
+h4, h3 {
+  padding: 5px 10px;
+}
+
+.service {
+  padding: 10px;
 }
 
 
@@ -18,32 +27,37 @@
 
 .appDiv {
   margin: 12% auto;
-  background-color:rgba(255, 255, 255, 0.144);
+  background-color:rgba(255, 255, 255, 0.062);
   /* border: 3px solid #f1f1f1; */
   width: 950px;
-  color: lightgrey; */
-  animation: fadeIn ease 3s;
+  color: lightgrey;
+  animation: fadeIn ease 2s;
 }
 
 .dark-text {
   color: rgb(255, 255, 255);
-  background-color:rgba(255, 255, 255, 0.144);
+  background-color:rgba(255, 255, 255, 0.055);
 }
 
-.card-header {
-  background-color:rgba(255, 255, 255, 0.144);
+/* .card-header { */
+  /* background-color:rgba(255, 255, 255, 0.055); */
+/* } */
+
+div.form-group, .vehicle {
+  padding: 5px 20px;
 }
 
-
-
-.mainFooter {
-  /* background-color: rgba(0, 0, 0, 0.411); */
-  /* height: 250px; */
+input {
+  background-color:rgba(255, 255, 255, 0.055);
 }
 
+.service {
+  padding: 2px 20px;
+}
 
 div.card {
-  background-color: rgba(5, 5, 5, 0.322);
+  background-color:rgba(255, 255, 255, 0);
+  border: none;
 }
 
 button.btn.btn-outline-dark {
@@ -53,6 +67,18 @@ button.btn.btn-outline-dark {
 
 #returnBtn {
     margin: 20px;
+}
+
+div.card-header {
+  padding: 20px 0px;
+}
+
+.form-control {
+  background-color: #00000052;
+}
+
+input.form-control, select.form-control {
+  background-color: transparent;
 }
 
 /*=================== fade in ==================*/

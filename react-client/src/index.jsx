@@ -55,7 +55,7 @@ class App extends React.Component {
   addService(service) {
     service['vehicleId'] = this.state.selected._id;
     axios.post('http://localhost:3000/service', { service })
-    .then(() => this.getService())
+    .then(() => this.getService(service.vehicleId))
     .catch((err) => console.log(err, 'error'));
   }
 
@@ -76,7 +76,7 @@ class App extends React.Component {
     var { serviceList } = this.state
 
     return (
-      <div mainDiv="mainDiv">
+      <div >
         <div className="appDiv" >
           {selected
           ? <div >

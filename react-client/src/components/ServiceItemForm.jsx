@@ -16,6 +16,7 @@ class NewVehicleForm extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.resetForm = this.resetForm.bind(this);
   }
 
 
@@ -27,6 +28,10 @@ class NewVehicleForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.fn(this.state);
+    this.resetForm()
+  }
+
+  resetForm() {
     this.setState({
       milage: 0,
       service: '',
