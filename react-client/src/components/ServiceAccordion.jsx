@@ -10,7 +10,7 @@ const ServiceAccordion = (props) => {
 
   return(
     <div>
-      <Accordion defaultActiveKey="0" className="dark-text service">
+      <Accordion defaultActiveKey="0" className="dark-text service collapsing">
 
       <Card>
         <Card.Header className="transparent-background">
@@ -22,10 +22,12 @@ const ServiceAccordion = (props) => {
           <ServiceItemForm fn={props.fn}/>
         </Accordion.Collapse>
       </Card>
-       
+
     </Accordion>
     </div>
   )
 }
 
 export default ServiceAccordion;
+
+// mongodb+srv://eric123:<e1r2i3c4>@trackit.qla4h.mongodb.net/<TrackIt>?retryWrites=true&w=majority

@@ -16,6 +16,8 @@ h4, h3 {
 }
 
 
+
+
 .fade-in {
   animation: fadeIn ease 23s;
 -webkit-animation: fadeIn ease 20s;
@@ -28,10 +30,14 @@ h4, h3 {
 .appDiv {
   margin: 12% auto;
   background-color:rgba(255, 255, 255, 0.062);
-  /* border: 3px solid #f1f1f1; */
+  border: 3px solid rgba(0, 0, 0, 0.208);
   width: 950px;
   color: lightgrey;
   animation: fadeIn ease 2s;
+}
+
+div.card {
+  border: 3px solid black;
 }
 
 .dark-text {
@@ -79,6 +85,17 @@ div.card-header {
 
 input.form-control, select.form-control {
   background-color: transparent;
+}
+
+.container {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.31);
+  padding-top: 10px;
+}
+
+.collapsing {
+  /* -webkit-transition-delay: 1.3s;
+  transition-delay: 1.3s; */
+  transition: height 1s ease;
 }
 
 /*=================== fade in ==================*/

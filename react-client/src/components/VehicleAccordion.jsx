@@ -7,7 +7,7 @@ import NewVehicleForm from './NewVehicleForm.jsx';
 const VehicleAccordion = (props) => {
 
   return(
-    <Accordion defaultActiveKey="0" className="accordion">
+    <Accordion defaultActiveKey="0" className="accordion collapsing">
     <Card >
       <Card.Header>
         <Accordion.Toggle as={Button} variant="outline-dark" eventKey="1">
