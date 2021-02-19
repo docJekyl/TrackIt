@@ -5,6 +5,7 @@ const Vehicle = require('../database-mongo/vehicle');
 const Service = require('../database-mongo/service')
 
 const app = express();
+const PORT = process.env.PORT || 3000
 
 app.use(express.static(__dirname + '/../react-client/dist'));
 
@@ -53,7 +54,7 @@ app.post('/service', async (req, res) => {
 })
 
 
-app.listen(3000, function() {
-  console.log('listening on port 3000!');
+app.listen(PORT, function() {
+  console.log(`listening on port ${PORT}!`);
 });
 
