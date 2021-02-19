@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 
 // Returns all vehicles
-app.get('/vehicle', async (req, res) => {
+app.get('/vehicle', async (req, res) =>
   try {
     var results = await Vehicle.find();
     res.status(200).send(results);
@@ -52,6 +52,11 @@ app.post('/service', async (req, res) => {
     res.status(500).send(err);
   }
 })
+
+// ==================================
+if (process.env.NODE_ENV === 'production') {
+  
+}
 
 
 app.listen(PORT, function() {
