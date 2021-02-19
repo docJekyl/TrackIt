@@ -4,8 +4,8 @@
   "description": "A full-stack application allowing the user to track vehicle maintenance of one or many vehicles.",
   "main": "index.js",
   "scripts": {
+    "start": "node server/index.js",
     "react-dev": "webpack -d --watch",
-    "start": "server/index.js",
     "start-dev": "nodemon server/index.js"
   },
   "author": "Beth Johnson",
