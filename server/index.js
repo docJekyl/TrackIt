@@ -2,10 +2,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const Vehicle = require('../database-mongo/vehicle');
-const Service = require('../database-mongo/service')
+const Service = require('../database-mongo/service');
 
 const app = express();
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static(__dirname + '/../react-client/dist'));
 
@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 
 // Returns all vehicles
-app.get('/vehicle', async (req, res) =>
+app.get('/vehicle', async (req, res) => {
   try {
     var results = await Vehicle.find();
     res.status(200).send(results);
@@ -54,9 +54,9 @@ app.post('/service', async (req, res) => {
 })
 
 // ==================================
-if (process.env.NODE_ENV === 'production') {
-  
-}
+// if (process.env.NODE_ENV === 'production') {
+
+// }
 
 
 app.listen(PORT, function() {

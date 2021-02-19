@@ -4,10 +4,10 @@
   "description": "A full-stack application allowing the user to track vehicle maintenance of one or many vehicles.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node server/index.js",
     "heroku-postbuild": "webpack-p",
     "react-dev": "webpack -d --watch",
-    "dev-start": "nodemon server/index.js"
+    "start-dev": "nodemon server/index.js"
   },
   "author": "Beth Johnson",
   "license": "ISC",
