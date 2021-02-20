@@ -2,12 +2,15 @@
   "name": "vehicle_maintenance",
   "version": "1.0.0",
   "description": "A full-stack application allowing the user to track vehicle maintenance of one or many vehicles.",
+  "engines": {
+    "npm": "6.x"
+  },
   "main": "index.js",
   "scripts": {
     "react-dev": "webpack -d --watch",
     "start-dev": "nodemon server/index.js",
     "start": "node server/index.js",
-    "heroku-postbuild": "webpack-p"
+    "heroku-postbuild": "webpack -p"
   },
   "author": "Beth Johnson",
   "license": "ISC",
