@@ -31,21 +31,21 @@ class App extends React.Component {
 
   // Retrieves all vehicles
   getVehicles() {
-    axios.get('http://localhost:3000/vehicle')
+    axios.get('/vehicle')
       .then((result) =>{ this.setState({ vehicles: result.data }) })
       .catch((err) => console.log(err, 'error'));
   }
 
   // Add a vehicle to the app
   addVehicle(vehicle) {
-    axios.post('http://localhost:3000/vehicle', { vehicle })
+    axios.post('/vehicle', { vehicle })
     .then(() => this.getVehicles())
     .catch((err) => console.log(err))
   }
 
   // Get all service records associated with a vehicle
   getService(vehicleId) {
-    axios.get(`http://localhost:3000/service?ID=${vehicleId}`)
+    axios.get(`/service?ID=${vehicleId}`)
       .then((result) =>{
         this.setState({ serviceList: result.data }) })
       .catch((err) => console.log(err, 'error'));
@@ -54,7 +54,7 @@ class App extends React.Component {
   // add a service to the database for current vehicle
   addService(service) {
     service['vehicleId'] = this.state.selected._id;
-    axios.post('http://localhost:3000/service', { service })
+    axios.post('/service', { service })
     .then(() => this.getService(service.vehicleId))
     .catch((err) => console.log(err, 'error'));
   }
