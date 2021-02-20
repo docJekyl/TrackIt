@@ -7,6 +7,7 @@
   background-attachment: fixed;
 }
 
+
 h4, h3 {
   padding: 5px 10px;
 }
@@ -15,9 +16,6 @@ h4, h3 {
   padding: 10px;
 }
 
-
-
-
 .fade-in {
   animation: fadeIn ease 23s;
 -webkit-animation: fadeIn ease 20s;
@@ -25,7 +23,6 @@ h4, h3 {
 -o-animation: fadeIn ease 20s;
 -ms-animation: fadeIn ease 20s;
 }
-
 
 .appDiv {
   margin: 12% auto;
@@ -92,7 +89,7 @@ input.form-control, select.form-control {
   padding-top: 10px;
 }
 
-.collapsing {
+.coll {
   /* -webkit-transition-delay: 1.3s;
   transition-delay: 1.3s; */
   transition: height 1s ease;

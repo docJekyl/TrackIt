@@ -10,7 +10,7 @@ const ServiceAccordion = (props) => {
 
   return(
     <div>
-      <Accordion defaultActiveKey="0" className="dark-text service collapsing">
+      <Accordion defaultActiveKey="0" className="dark-text service coll">
 
       <Card>
         <Card.Header className="transparent-background">
