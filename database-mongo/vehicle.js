@@ -1,8 +1,8 @@
 var mongoose = require('mongoose');
 var db = require('./index.js')
-mongoose.Promise = global.Promise;
+// mongoose.Promise = global.Promise;
 
-var vehicleSchema = mongoose.Schema({
+var vehicleSchema = new mongoose.Schema({
   make: String,
   model: String,
   year: Number,

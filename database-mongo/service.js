@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var db = require('./index.js')
 
-mongoose.Promise = global.Promise;
+// mongoose.Promise = global.Promise;
 
 db.on('error', function() {
   console.log('mongoose connection error');

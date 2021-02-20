@@ -53,12 +53,6 @@ app.post('/service', async (req, res) => {
   }
 })
 
-// ==================================
-// if (process.env.NODE_ENV === 'production') {
-  
-//   app.use(express.static(__dirname + '/react-client/dist'));
-// }
-
 
 app.listen(process.env.PORT || PORT, function() {
   console.log(`listening on port ${PORT}!`);
