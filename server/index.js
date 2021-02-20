@@ -1,8 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const Vehicle = require('../database-mongo/vehicle');
-const Service = require('../database-mongo/service');
+const { Vehicle, Service } = require('../database-mongo')
 
 const app = express();
 const PORT = process.env.PORT || 3000;
