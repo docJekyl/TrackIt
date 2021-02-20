@@ -29,5 +29,3 @@ const ServiceAccordion = (props) => {
 }
 
 export default ServiceAccordion;
-
-// mongodb+srv://eric123:<e1r2i3c4>@trackit.qla4h.mongodb.net/<TrackIt>?retryWrites=true&w=majority
