@@ -1,7 +1,15 @@
 import React from 'react';
-import {
-  Container, Form, Button, Col,
-} from 'react-bootstrap';
+import { Container, Form, Button, Col } from 'react-bootstrap';
+
+
+const validateForm = (errors) => {
+  let valid = true;
+  Object.values(errors).forEach(
+    // if we have an error string set valid to false
+    (val) => val.length > 0 && (valid = false)
+  );
+  return valid;
+}
 
 
 class NewVehicleForm extends React.Component {
@@ -11,19 +19,13 @@ class NewVehicleForm extends React.Component {
       milage: 0,
       service: '',
       note: '',
-      cost: 0,
+      cost: 0
     }
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.resetForm = this.resetForm.bind(this);
   }
-
-
-  handleChange(e) {
-    this.setState({[e.target.name]: e.target.value})
-  }
-
 
   handleSubmit(e) {
     e.preventDefault();
@@ -40,9 +42,12 @@ class NewVehicleForm extends React.Component {
     })
   }
 
+  handleChange(e) {
+    this.setState({[e.target.name]: e.target.value})
+  }
+
 
   render() {
-
     return (
       <Form>
         <Form.Group controlId="formBasicMilage">

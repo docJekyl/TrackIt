@@ -7,21 +7,12 @@
   background-attachment: fixed;
 }
 
-
 h4, h3 {
   padding: 5px 10px;
 }
 
 .service {
   padding: 10px;
-}
-
-.fade-in {
-  animation: fadeIn ease 23s;
--webkit-animation: fadeIn ease 20s;
--moz-animation: fadeIn ease 20s;
--o-animation: fadeIn ease 20s;
--ms-animation: fadeIn ease 20s;
 }
 
 .appDiv {
@@ -41,10 +32,6 @@ div.card {
   color: rgb(255, 255, 255);
   background-color:rgba(255, 255, 255, 0.055);
 }
-
-/* .card-header { */
-  /* background-color:rgba(255, 255, 255, 0.055); */
-/* } */
 
 div.form-group, .vehicle {
   padding: 5px 20px;
@@ -69,7 +56,7 @@ button.btn.btn-outline-dark {
 }
 
 #returnBtn {
-    margin: 20px;
+  margin: 20px;
 }
 
 div.card-header {
@@ -90,28 +77,11 @@ input.form-control, select.form-control {
 }
 
 .coll {
-  /* -webkit-transition-delay: 1.3s;
-  transition-delay: 1.3s; */
   transition: height 1s ease;
 }
 
 /*=================== fade in ==================*/
-@keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-@-moz-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
 @-webkit-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-@-o-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import axios from 'axios';
 import ReactDOM from 'react-dom';
-import NewVehicleForm from './components/NewVehicleForm.jsx';
 import VehicleList from './components/VehicleList.jsx';
 import ServiceList from './components/ServiceList.jsx';
 import VehicleAccordion from './components/VehicleAccordion.jsx';
@@ -17,6 +16,7 @@ class App extends React.Component {
       serviceList: [],
       selected: null,
     }
+
     this.getVehicles = this.getVehicles.bind(this);
     this.addVehicle = this.addVehicle.bind(this);
     this.setSelectedVehicle = this.setSelectedVehicle.bind(this);

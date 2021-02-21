@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  Container, Form, Button, Col,
-} from 'react-bootstrap';
+import { Container, Form, Button, Col } from 'react-bootstrap';
 
 
 class NewVehicleForm extends React.Component {
