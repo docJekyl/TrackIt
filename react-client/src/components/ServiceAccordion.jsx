@@ -5,8 +5,12 @@ import ServiceItemForm from './ServiceItemForm.jsx';
 
 const ServiceAccordion = (props) => {
 
+  const [ acc, setAcc] = useState();
 
-  const [accordionToggle] = useState(0);
+  var accordionToggle = () => {
+    setAcc(0)
+  }
+
 
   return(
     <div>
@@ -14,12 +18,12 @@ const ServiceAccordion = (props) => {
 
       <Card>
         <Card.Header className="transparent-background">
-          <Accordion.Toggle as={Button} variant="outline-dark" eventKey="1">
+          <Accordion.Toggle as={Button} variant="outline-dark" eventKey={ `${acc}` }>
             Add a service to this vehicle
           </Accordion.Toggle>
         </Card.Header>
-        <Accordion.Collapse eventKey="1">
-          <ServiceItemForm fn={props.fn}/>
+        <Accordion.Collapse eventKey={ `${acc}` }>
+          <ServiceItemForm fn={props.fn} toggle={accordionToggle}/>
         </Accordion.Collapse>
       </Card>
 

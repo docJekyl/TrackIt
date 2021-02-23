@@ -7,22 +7,23 @@ const NewVehicleForm = (props) => (
   <Formik
     initialValues = {{ make: '', model: '', year: '', nick_name: '', vin: '', milage_at_purchase:'' }}
     onSubmit={ (values, { setSubmitting }) => {
-      props.fn(values)
+      props.fn(values);
+      props.toggle();
     }}
 
     validationSchema = { Yup.object().shape({
       make: Yup.string()
-        .required('Required'),
+        .required('Required!'),
       model: Yup.string()
-        .required('Required'),
+        .required('Required!'),
       year: Yup.number()
-        .required('Required'),
+        .required('Required!'),
       nick_name: Yup.string()
-        .required('Required'),
+        .required('Required!'),
       vin: Yup.string()
-        .required('Required'),
+        .required('Required!'),
       milage_at_purchase: Yup.number()
-        .required('Required')
+        .required('Required! If milage is unknown, type unknown')
     })}
     >
 

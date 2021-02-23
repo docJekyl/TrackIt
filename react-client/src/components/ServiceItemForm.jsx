@@ -8,18 +8,19 @@ const ServiceItemForm = (props) => (
     initialValues={{ milage: '', service: '', note:'', cost: '' }}
     onSubmit={ (values, { setSubmitting }) => {
       console.log(values)
-      // props.fn(values)
+      props.fn(values)
+      props.toggle()
     }}
 
     validationSchema = { Yup.object().shape({
       milage: Yup.number()
-        .required('Required'),
+        .required('Required!'),
       service: Yup.string()
-        .required('Required'),
+        .required('Required!'),
       note: Yup.string()
-        .required('Required'),
+        .required('Required!'),
       cost: Yup.number()
-        .required('Required')
+        .required('Required! If milage is unknown, type unknown')
     })}
     >
 
