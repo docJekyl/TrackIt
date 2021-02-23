@@ -23,6 +23,11 @@ class App extends React.Component {
     this.getService = this.getService.bind(this);
     this.addService = this.addService.bind(this);
     this.returnToVehicles - this.returnToVehicles.bind(this);
+    this.logCounter = this.logCounter.bind(this);
+  }
+
+  logCounter(count) {
+    console.log(count)
   }
 
   componentDidMount() {
@@ -45,7 +50,7 @@ class App extends React.Component {
 
   // Get all service records associated with a vehicle
   getService(vehicleId) {
-    axios.get(`/service?ID=${vehicleId}`)
+    axios.get(`/service?ID=${ vehicleId }`)
       .then((result) =>{
         this.setState({ serviceList: result.data }) })
       .catch((err) => console.log(err, 'error'));
@@ -61,11 +66,10 @@ class App extends React.Component {
 
   // click handler for viewing a vehicle's service
   setSelectedVehicle(selection) {
-    this.setState({selected: selection})
+    this.setState({ selected: selection })
     this.getService(selection._id)
   }
 
-  // return
   returnToVehicles() {
     this.setState({selected: null});
   }
@@ -78,18 +82,18 @@ class App extends React.Component {
     return (
       <div >
         <div className="appDiv" >
-          {selected
+          { selected
           ? <div >
-              <ServiceList vehicle={selected} serviceList={serviceList} />
-              <ServiceAccordion fn={this.addService}/>
+              <ServiceList vehicle={ selected } serviceList={ serviceList } />
+              <ServiceAccordion fn={ this.addService }/>
               <Button onClick={() => this.returnToVehicles()} variant="outline-dark" id="returnBtn">
                   Return to Vehicle Selection
               </Button>
             </div>
 
           : <div>
-            <VehicleList vehicles={vehicles} fn={this.setSelectedVehicle} />
-            <VehicleAccordion fn={this.addVehicle}/>
+            <VehicleList vehicles={ vehicles } fn={ this.setSelectedVehicle } />
+            <VehicleAccordion fn={ this.addVehicle }/>
           </div>
           }
 

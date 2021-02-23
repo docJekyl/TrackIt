@@ -8,7 +8,7 @@ const ServiceItems =  (props) => (
         <Row className="service"> Milage: {props.item.milage} </Row>
         <Row className="service"> Service Done: {props.item.service}</Row>
         <Row className="service"> Comments: {props.item.note}</Row>
-        <Row className="service"> Cost: {props.item.cost}</Row>
+        <Row className="service"> Cost: ${props.item.cost}</Row>
       </Container>
     </Card>
   </div>
