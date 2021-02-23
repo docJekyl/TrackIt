@@ -39,7 +39,7 @@ const ServiceItemForm = (props) => (
 
           return (
             <Form>
-              <Form.Group controlId="formBasicMilage">
+              <Form.Group controlId="formBasicMilage" >
                 <Form.Label>Current Milage</Form.Label>
                 <Form.Control
                   required
@@ -50,7 +50,7 @@ const ServiceItemForm = (props) => (
                 />
                 <Form.Text className="text-muted" />
                 {errors.milage && touched.milage && (
-                  <div className="imput-feedback">{errors.milage}</div>
+                  <div className="input-feedback">{errors.milage}</div>
                 )}
               </Form.Group>
 
@@ -75,7 +75,7 @@ const ServiceItemForm = (props) => (
                 </Form.Control>
                 <Form.Text className="text-muted" />
                 {errors.service && touched.service && (
-                  <div className="imput-feedback">{errors.service}</div>
+                  <div className="input-feedback">{errors.service}</div>
                 )}
               </Form.Group>
 
@@ -90,7 +90,7 @@ const ServiceItemForm = (props) => (
                 />
                 <Form.Text className="text-muted" />
                 {errors.note && touched.note && (
-                  <div className="imput-feedback">{errors.note}</div>
+                  <div className="input-feedback">{errors.note}</div>
                 )}
               </Form.Group>
 
@@ -106,7 +106,7 @@ const ServiceItemForm = (props) => (
                 />
                 <Form.Text className="text-muted" />
                 {errors.cost && touched.cost && (
-                  <div className="imput-feedback">{errors.cost}</div>
+                  <div className="input-feedback">{errors.cost}</div>
                 )}
               </Form.Group>
 

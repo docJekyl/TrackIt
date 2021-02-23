@@ -5,7 +5,7 @@ import * as Yup from 'yup'
 
 const NewVehicleForm = (props) => (
   <Formik
-    initialValues = {{ make: 'a', model: 's', year: '1', nick_name: 'a', vin: 'a', milage_at_purchase:'1' }}
+    initialValues = {{ make: '', model: '', year: '', nick_name: '', vin: '', milage_at_purchase:'' }}
     onSubmit={ (values, { setSubmitting }) => {
       props.fn(values)
     }}
