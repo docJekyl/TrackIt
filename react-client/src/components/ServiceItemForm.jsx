@@ -7,18 +7,13 @@ const ServiceItemForm = (props) => (
   <Formik
     initialValues={{ milage: '', service: '', note:'', cost: '' }}
     onSubmit={ (values, { setSubmitting }) => {
-<<<<<<< HEAD
       console.log(values)
       props.fn(values)
       props.toggle()
-=======
-      props.fn(values)
->>>>>>> origin
     }}
 
     validationSchema = { Yup.object().shape({
       milage: Yup.number()
-<<<<<<< HEAD
         .required('Required!'),
       service: Yup.string()
         .required('Required!'),
@@ -30,17 +25,6 @@ const ServiceItemForm = (props) => (
     >
 
 
-=======
-        .required('Required'),
-      service: Yup.string()
-        .required('Required'),
-      note: Yup.string()
-        .required('Required'),
-      cost: Yup.number()
-        .required('Required')
-    })}
-    >
->>>>>>> origin
       {
         props => {
           const {
@@ -56,11 +40,7 @@ const ServiceItemForm = (props) => (
 
           return (
             <Form>
-<<<<<<< HEAD
               <Form.Group controlId="formBasicMilage" >
-=======
-              <Form.Group controlId="formBasicMilage">
->>>>>>> origin
                 <Form.Label>Current Milage</Form.Label>
                 <Form.Control
                   required
@@ -71,11 +51,7 @@ const ServiceItemForm = (props) => (
                 />
                 <Form.Text className="text-muted" />
                 {errors.milage && touched.milage && (
-<<<<<<< HEAD
                   <div className="input-feedback">{errors.milage}</div>
-=======
-                  <div className="imput-feedback">{errors.milage}</div>
->>>>>>> origin
                 )}
               </Form.Group>
 
@@ -100,11 +76,7 @@ const ServiceItemForm = (props) => (
                 </Form.Control>
                 <Form.Text className="text-muted" />
                 {errors.service && touched.service && (
-<<<<<<< HEAD
                   <div className="input-feedback">{errors.service}</div>
-=======
-                  <div className="imput-feedback">{errors.service}</div>
->>>>>>> origin
                 )}
               </Form.Group>
 
@@ -119,11 +91,7 @@ const ServiceItemForm = (props) => (
                 />
                 <Form.Text className="text-muted" />
                 {errors.note && touched.note && (
-<<<<<<< HEAD
                   <div className="input-feedback">{errors.note}</div>
-=======
-                  <div className="imput-feedback">{errors.note}</div>
->>>>>>> origin
                 )}
               </Form.Group>
 
@@ -139,11 +107,7 @@ const ServiceItemForm = (props) => (
                 />
                 <Form.Text className="text-muted" />
                 {errors.cost && touched.cost && (
-<<<<<<< HEAD
                   <div className="input-feedback">{errors.cost}</div>
-=======
-                  <div className="imput-feedback">{errors.cost}</div>
->>>>>>> origin
                 )}
               </Form.Group>
 
