@@ -9,7 +9,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server/index.js",
-    "heroku-postbuild": "webpack -p",
+    "heroku-postbuild": "webpack",
     "react-dev": "webpack -d --watch",
     "dev-start": "nodemon server/index.js"
   },
